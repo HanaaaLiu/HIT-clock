@@ -31,9 +31,15 @@ jobs:
           && sudo mv chromedriver /usr/local/bin/chromedriver \
           && sudo chmod +x /usr/local/bin/chromedriver \
           && chromedriver --version
-    - name: Start clock
+    - name: Start clock1
       env:
-        ID: ${{ secrets.ID }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+        ID: ${{ secrets.ID_ljh }}
+        PASSWORD: ${{ secrets.PASSWORD_ljh }}
         LOCATION: ${{ secrets.LOCATION }}
       run: python 每日上报.py
+    - name: Start clock2
+        env:
+          ID: ${{ secrets.ID_hb }}
+          PASSWORD: ${{ secrets.PASSWORD_hb }}
+          LOCATION: ${{ secrets.LOCATION }}
+        run: python 每日上报.py
