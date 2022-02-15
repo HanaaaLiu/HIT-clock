@@ -38,8 +38,8 @@ jobs:
         LOCATION: ${{ secrets.LOCATION }}
       run: python 每日上报.py
     - name: Start clock2
-        env:
-          ID: ${{ secrets.ID_HB }}
-          PASSWORD: ${{ secrets.PASSWORD_HB }}
-          LOCATION: ${{ secrets.LOCATION }}
-        run: python 每日上报.py
+      env:
+        ID: ${{ secrets.ID_HB }}
+        PASSWORD: ${{ secrets.PASSWORD_HB }}
+        LOCATION: ${{ secrets.LOCATION }}
+      run: python 每日上报.py
