@@ -33,13 +33,13 @@ jobs:
           && chromedriver --version
     - name: Start clock1
       env:
-        ID: ${{ secrets.ID_ljh }}
-        PASSWORD: ${{ secrets.PASSWORD_ljh }}
+        ID: ${{ secrets.ID_LJH }}
+        PASSWORD: ${{ secrets.PASSWORD_LJH }}
         LOCATION: ${{ secrets.LOCATION }}
       run: python 每日上报.py
     - name: Start clock2
         env:
-          ID: ${{ secrets.ID_hb }}
-          PASSWORD: ${{ secrets.PASSWORD_hb }}
+          ID: ${{ secrets.ID_HB }}
+          PASSWORD: ${{ secrets.PASSWORD_HB }}
           LOCATION: ${{ secrets.LOCATION }}
         run: python 每日上报.py
