@@ -34,7 +34,7 @@ jobs:
           && chromedriver --version
     - name: start leave school
       env:
-        ID: ${{ secrets.ID }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+        ID: ${{ secrets.ID_LJH }}
+        PASSWORD: ${{ secrets.PASSWORD_LJH }}
 
       run: python leave_school.py
